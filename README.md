@@ -35,48 +35,48 @@ This project consists of two key components: the Google Earth Engine (GEE) scrip
 
 **`bhubaneswar_weather_extraction.js`:** This is a JavaScript script designed to run in the GEE Code Editor. It handles all the heavy lifting, including:
 
-1. Defining the spatial grid for Bhubaneswar based on a boundary shapefile.
+* Defining the spatial grid for Bhubaneswar based on a boundary shapefile.
 
-2. Sourcing hourly weather data from the ERA5-Land reanalysis dataset.
+* Sourcing hourly weather data from the ERA5-Land reanalysis dataset.
 
-3. Sourcing high-resolution static land cover data from Sentinel-2 satellite imagery.
+* Sourcing high-resolution static land cover data from Sentinel-2 satellite imagery.
 
-4. Processing and merging these datasets.
+* Processing and merging these datasets.
 
-5. Exporting the final, merged dataset as yearly CSV files to your Google Drive.
+* Exporting the final, merged dataset as yearly CSV files to Google Drive.
 
 **`Bhubaneswar Shapefile`:** This folder contains the geographical boundary files (e.g., .shp, .dbf, .shx) for the city of Bhubaneswar.
 
 ## Quick-start
 **1. Clone the repository & Get the shapefile**
 
-(i) Clone this repository to your local machine.
+* Clone this repository to your local machine.
 
-(ii) Ensure the `Bhubaneswar Shapefile` folder contains all the necessary files for the Bhubaneswar municipal boundary.
+* Ensure the `Bhubaneswar Shapefile` folder contains all the necessary files for the Bhubaneswar municipal boundary.
 
 **2. Upload the shapefile to Earth Engine**
 
-(i) Open the Google Earth Engine Code Editor.
+* Open the Google Earth Engine Code Editor.
 
-(ii) Go to the Assets tab on the left panel, and click New -> Shape files to upload the `Bhubaneswar Shapefile` folder from your local machine.
+* Go to the Assets tab on the left panel, and click New -> Shape files to upload the `Bhubaneswar Shapefile` folder from your local machine.
 
-(iii) Give it a clear Asset ID, e.g., `users/your_username/Bhubaneswar_Boundary`.
+* Give it a clear Asset ID, e.g., `users/your_username/Bhubaneswar_Boundary`.
 
 **3. Run the GEE script**
 
-(i) Copy the content of `bhubaneswar_weather_extraction_script.js` into your GEE Code Editor.
+* Copy the content of `bhubaneswar_weather_extraction_script.js` into your GEE Code Editor.
 
 **IMPORTANT:** Update the AOI_ASSET_PATH variable inside the script to match the Asset ID you used in the previous step.
 
-(ii) Click **Run** in the Code Editor, then go to the Tasks tab on the right and click **RUN** on the pending tasks to export the data to your Google Drive.
+* Click **Run** in the Code Editor, then go to the Tasks tab on the right and click **RUN** on the pending tasks to export the data to your Google Drive.
 
 ## Acknowledgement
 This project is made possible by the open data and computational platforms generously provided by:
 
-**1. Google Earth Engine** for providing the cloud-based geospatial analysis platform.
+* **Google Earth Engine** for providing the cloud-based geospatial analysis platform.
 
-**2. ECMWF** for the ERA5-Land meteorological reanalysis dataset.
+* **ECMWF** for the ERA5-Land meteorological reanalysis dataset.
 
-**3. ESA Copernicus** for the Sentinel-2 satellite imagery.
+* **ESA Copernicus** for the Sentinel-2 satellite imagery.
 
-**4. Bhubaneswar Municipal Corporation** for the city's boundary data. 
+* **Bhubaneswar Municipal Corporation** for the city's boundary data. 
